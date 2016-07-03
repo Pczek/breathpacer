@@ -74,7 +74,7 @@
                 duration: 12000,
                 onUpdate: function (progress) {
                     var breathProgress = breathInEasing(progress);
-                    console.log("progress: "+ progress + "breathProgress: "+ breathProgress);
+//                    console.log("progress: "+ progress + "breathProgress: "+ breathProgress);
                     circle.style.transform = 'scale(' +20*breathProgress+ ')';
                 }
             }).run();
