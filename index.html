@@ -26,14 +26,6 @@
         </style>
     </head>
     <body>
-<<<<<<< HEAD
-
-        <div id="BreathMax"></div>
-        <div id="BreathMin"></div>
-        <div id="BreathCircle"></div>
-
-        <script src="https://cdn.jsdelivr.net/mojs/latest/mo.min.js"></script>
-=======
         <svg width="400" height="400" class="center" id="CurrentBreathCircle">
             <circle cx="200" cy="200" r="3" fill="#268bd2" ></circle>
         </svg>
@@ -47,7 +39,6 @@
         
         <script src="//cdn.jsdelivr.net/zepto/1.1.6/zepto.min.js"></script>
         <script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
->>>>>>> master
         <script>
             $("#CurrentBreathCircle").velocity({ scale:"5000%" }, {
                 /* Velocity's default options */
@@ -57,20 +48,6 @@
                 delay: 1000,
                 mobileHA: true
             });
-<<<<<<< HEAD
-
-            new mojs.Tween({
-                repeat:   999,
-                delay:    1500,
-                duration: 12000,
-                onUpdate: function (progress) {
-                    var breathProgress = breathInEasing(progress);
-//                    console.log("progress: "+ progress + "breathProgress: "+ breathProgress);
-                    circle.style.transform = 'scale(' +20*breathProgress+ ')';
-                }
-            }).run();
-=======
->>>>>>> master
         </script>
     </body>
 </html>
