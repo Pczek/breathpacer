@@ -13,60 +13,51 @@
             }
 
             body {
-                background: rgba(241, 226, 215, 0.2);
+                background: #fdf6e3;
             }
 
-            #BreathCircle {
-                width:      1vw;
-                height:     1vw;
-                background: #F15C4D;
-                position:   absolute;
+            .center{
+                position: absolute;
+                margin-left: -200px;
+                margin-top:  -200px;
                 top:        50%;
                 left:       50%;
-                margin-left: -0.5vw;
-                margin-top:  -0.5vw;
-                border-radius: 50%;
-            }
-
-            #BreathMax{
-                position:   absolute;
-                width:      20vw;
-                height:     20vw;
-                border: solid 0.25vw;
-                border-color: #dddddd;
-                top:        50%;
-                left:       50%;
-                margin-left: -10.125vw;
-                margin-top:  -10.125vw;
-                border-radius: 50%;
-            }
-            #BreathMin{
-                position:   absolute;
-                width:      0.5vw;
-                height:     0.5vw;
-                z-index: 100;
-                background-color: #dddddd;
-                top:        50%;
-                left:       50%;
-                margin-left: -0.25vw;
-                margin-top:  -0.25vw;
-                border-radius: 50%;
             }
         </style>
     </head>
     <body>
+<<<<<<< HEAD
 
         <div id="BreathMax"></div>
         <div id="BreathMin"></div>
         <div id="BreathCircle"></div>
 
         <script src="https://cdn.jsdelivr.net/mojs/latest/mo.min.js"></script>
-        <script>
-            var circle = document.querySelector('#BreathCircle');
+=======
+        <svg width="400" height="400" class="center" id="CurrentBreathCircle">
+            <circle cx="200" cy="200" r="3" fill="#268bd2" ></circle>
+        </svg>
 
-            var breathInEasing = mojs.easing.path('m 0,100 14.069455,0 C 28.632777,75.891506 20.219557,0.08184585 49.595946,-0.31941391 c 2.912131,-0.0242802 5.90269,-0.0555492 7.462836,0.6276571 C 74.159447,25.82262 72.740558,67.880723 99.852868,99.811626',{
-                rect:100
+        <svg width="400" height="400" class="center" id="MinBreathCircle">
+            <circle cx="200" cy="200" r="3" fill="#586e75" ></circle>
+        </svg>
+        <svg width="400" height="400" class="center" id="MaxBreathCircle">
+            <circle cx="200" cy="200" r="150" stroke="#586e75" stroke-width="2"fill="none"></circle>
+        </svg>
+        
+        <script src="//cdn.jsdelivr.net/zepto/1.1.6/zepto.min.js"></script>
+        <script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+>>>>>>> master
+        <script>
+            $("#CurrentBreathCircle").velocity({ scale:"5000%" }, {
+                /* Velocity's default options */
+                duration: 5000,
+                easing: "swing",
+                loop: true,
+                delay: 1000,
+                mobileHA: true
             });
+<<<<<<< HEAD
 
             new mojs.Tween({
                 repeat:   999,
@@ -78,6 +69,8 @@
                     circle.style.transform = 'scale(' +20*breathProgress+ ')';
                 }
             }).run();
+=======
+>>>>>>> master
         </script>
     </body>
 </html>
