@@ -6,16 +6,17 @@
         <title>Breath Pacer</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
         <style>
             body, html {
                 padding: 0;
+                font-family: 'Fira Mono', monospace;
+                color:#657b83;
             }
 
             body {
                 background: #fdf6e3;
             }
-
             .center{
                 position: absolute;
                 margin-left: -200px;
@@ -23,19 +24,47 @@
                 top:        50%;
                 left:       50%;
             }
+            #CurrentBreathCircle{
+                position: absolute;
+                margin-left: -5px;
+                margin-top:  -5px;
+                top:        50%;
+                left:       50%;
+            }
+            #info{
+                text-align: center;
+            }
+            a{
+                color: #657b83;
+            }
+            a:active{
+                color: #657b83;
+            }
+            a:hover{
+                color:#d33682;
+            }
+
         </style>
     </head>
     <body>
-        <svg width="400" height="400" class="center" id="CurrentBreathCircle">
-            <circle cx="200" cy="200" r="3" fill="#268bd2" ></circle>
+        <svg width="10" height="10" id="CurrentBreathCircle">
+            <circle cx="5" cy="5" r="3" fill="#268bd2" ></circle>
         </svg>
-
         <svg width="400" height="400" class="center" id="MinBreathCircle">
             <circle cx="200" cy="200" r="3" fill="#586e75" ></circle>
         </svg>
         <svg width="400" height="400" class="center" id="MaxBreathCircle">
             <circle cx="200" cy="200" r="150" stroke="#586e75" stroke-width="2"fill="none"></circle>
         </svg>
+        
+        <div id="info">
+            <p>
+            Inspired by <a href="http://www.complete-coherence.com">Dr. Alan Watkins</a> talk about <a href="https://www.youtube.com/watch?v=q06YIWCR2Js">Being Brilliant Every Single Day</a>
+            </p>
+            <p>
+                Using <a href="http://ethanschoonover.com/solarized">Solarized Colors</a> from <a href="http://ethanschoonover.com">Ethan Schoonover</a>
+            </p>
+        </div>
         
         <script src="//cdn.jsdelivr.net/zepto/1.1.6/zepto.min.js"></script>
         <script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
